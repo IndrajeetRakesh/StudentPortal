@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <style>
+        /* Element selectors */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f6fb;
+            color: #263238;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.5;
+        }
+        header {
+            background-color: #e1ecff;
+            border: 1px solid #b7cffb;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 { color: #174ea6; margin-top: 0; }
+        h2 {
+            color: #176b55;
+            border-bottom: 2px solid #d4e8e1;
+            padding-bottom: 6px;
+        }
+        nav a { color: #174ea6; margin: 0 8px; }
+        main { max-width: 900px; margin: 20px auto; }
+        section {
+            background-color: #ffffff;
+            border: 1px solid #dce3ee;
+            padding: 18px;
+            margin-bottom: 18px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            border: 1px solid #cbd5e1;
+            padding: 9px;
+            text-align: left;
+        }
+        th { background-color: #eaf1fb; }
+        ul { padding-left: 24px; }
+        label { display: block; margin-top: 12px; margin-bottom: 4px; }
+        input[type="text"], input[type="email"], select {
+            width: 100%;
+            max-width: 420px;
+            padding: 8px;
+            border: 1px solid #9aa9bc;
+            box-sizing: border-box;
+        }
+        .choice { margin-top: 6px; }
+        .choice label { display: inline; margin-right: 14px; }
+        input[type="radio"], input[type="checkbox"] { margin-right: 5px; }
+        button {
+            margin-top: 16px;
+            margin-right: 8px;
+            padding: 9px 15px;
+            border: 1px solid #174ea6;
+            background-color: #174ea6;
+            color: white;
+            cursor: pointer;
+        }
+        button[type="reset"] { background-color: #ffffff; color: #174ea6; }
+        .highlight {
+            color: #176b55;
+            font-weight: bold;
+            background-color: #e7f6ef;
+            padding: 2px 5px;
+        }
+        #student-name { color: #174ea6; }
+        .badge {
+            display: inline-block;
+            background-color: #fff0c2;
+            color: #7a4b00;
+            padding: 3px 8px;
+            border: 1px solid #f0d27a;
+            margin-left: 6px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+        footer { text-align: center; padding: 14px; color: #526174; }
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            header, section { padding: 13px; }
+            nav a { display: inline-block; margin: 5px; }
+            table { font-size: 0.9em; }
+            th, td { padding: 6px; }
+        }
+    </style>
+</head>
+<body>
+    <header id="home">
+        <h1>Student Portal</h1>
+        <nav aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#profile">Profile</a>
+            <a href="#courses">Courses</a>
+            <a href="#register">Register</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="profile">
+            <h2>Student Profile</h2>
+            <h3 id="student-name">Rahul Sharma <span class="badge">Top Performer</span></h3>
+            <table>
+                <thead>
+                    <tr><th scope="col">Field</th><th scope="col">Value</th></tr>
+                </thead>
+                <tbody>
+                    <tr><th scope="row">Name</th><td><span class="highlight">Rahul Sharma</span></td></tr>
+                    <tr><th scope="row">Student ID</th><td>24BCE1001</td></tr>
+                    <tr><th scope="row">Program</th><td><span class="highlight">Computer Science</span></td></tr>
+                    <tr><th scope="row">Year</th><td>1st Year</td></tr>
+                    <tr><th scope="row">Email</th><td>rahul@example.com</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="skills">
+            <h2>My Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>Git</li>
+            </ul>
+        </section>
+
+        <section id="courses">
+            <h2>Weekly Schedule</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Day</th><th scope="col">9:00 AM</th>
+                        <th scope="col">11:00 AM</th><th scope="col">2:00 PM</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><th scope="row">Monday</th><td>HTML</td><td>Mathematics</td><td>DSA</td></tr>
+                    <tr><th scope="row">Tuesday</th><td>CSS</td><td>DBMS</td><td>English</td></tr>
+                    <tr><th scope="row">Wednesday</th><td>JavaScript</td><td>DSA</td><td>Mathematics</td></tr>
+                    <tr><th scope="row">Thursday</th><td>DBMS</td><td>HTML</td><td>Project</td></tr>
+                    <tr><th scope="row">Friday</th><td>DSA</td><td>CSS</td><td>Workshop</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="register">
+            <h2>Course Registration</h2>
+            <form action="#" method="get">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+                <label for="student-id">Student ID</label>
+                <input type="text" id="student-id" name="student-id" placeholder="Enter your student ID" required>
+
+                <label for="course">Select Course</label>
+                <select id="course" name="course" required>
+                    <option value="" selected disabled>Select Course</option>
+                    <option value="html-css">HTML &amp; CSS</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="python">Python</option>
+                    <option value="data-structures">Data Structures</option>
+                    <option value="database-management">Database Management</option>
+                </select>
+
+                <p><strong>Preferred Learning Mode</strong></p>
+                <div class="choice">
+                    <input type="radio" id="online" name="learning-mode" value="online" required>
+                    <label for="online">Online</label>
+                    <input type="radio" id="offline" name="learning-mode" value="offline">
+                    <label for="offline">Offline</label>
+                </div>
+
+                <p><strong>Skills You Already Know</strong></p>
+                <div class="choice">
+                    <input type="checkbox" id="skill-html" name="skills" value="html">
+                    <label for="skill-html">HTML</label>
+                    <input type="checkbox" id="skill-css" name="skills" value="css">
+                    <label for="skill-css">CSS</label>
+                    <input type="checkbox" id="skill-javascript" name="skills" value="javascript">
+                    <label for="skill-javascript">JavaScript</label>
+                    <input type="checkbox" id="skill-python" name="skills" value="python">
+                    <label for="skill-python">Python</label>
+                </div>
+
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Student Portal. Created for an HTML and CSS lab assignment.</p>
+    </footer>
+</body>
+</html>
